@@ -1,6 +1,6 @@
 # Tiny
 
-This is the specification of the tiny language, called Tiny.
+This is the specification for a tiny custom language which is called Tiny.
 
 ## Description
 
