@@ -1,0 +1,93 @@
+digraph finite_state_machine {
+    fontname="Helvetica,Arial,sans-serif"
+    node [fontname="Helvetica,Arial,sans-serif"]
+    edge [fontname="Helvetica,Arial,sans-serif"]
+    rankdir=LR;
+//    Double circle for final states and 0 is the start state
+    node [shape = doublecircle]; func; ret; id; int; float; print; int_num1; int_num2; float_num; 9; 10;11;12;13;14;15;16;17;18;20;white;comment;
+    node [shape = circle];
+    0 -> 1 [label = "f"]
+    1 -> 2 [label = "u"]
+    2 -> 3 [label = "n"]
+    3 -> func [label = "c"]
+
+    func -> id [label = "a-zA-Z0-9_"]
+
+    id -> id[label = "a-zA-Z0-9_"]
+
+    0 -> 4[label = "r"]
+    4 -> 5[label = "e"]
+    5 -> 6[label = "t"]
+    6 -> 7[label = "u"]
+    7 -> 8[label = "r"]
+    8 -> ret[label = "n"]
+
+    ret -> id[label = "a-zA-Z0-9_"]
+
+    0 -> 9[label=";"]
+
+    0 -> 10[label="("]
+    0 -> 11[label=")"]
+    0 -> 12[label="{"]
+    0 -> 13[label="}"]
+    0 -> 14[label=","]
+    0 -> 15[label="="]
+    0 -> 16[label="+"]
+    0 -> 17[label="-"]
+    0 -> 18[label="*"]
+
+    0 -> white[label="\t\n "]
+    white->white[label="\\t\\n\\blank "]
+    0 -> 20[label="/"]
+    20 -> 21[label="/"]
+    21 -> 21[label="\."]
+    21 -> comment[label="\\n"]
+
+    0 -> 22[label="i"]
+    22 -> 23[label="n"]
+    23 -> int[label="t"]
+
+
+    1 -> 25[label="l"]
+    25 -> 26[label="o"]
+    26 -> 27[label="a"]
+    27 -> float[label="t"]
+
+    float -> id[label="a-zA-Z0-9_"]
+
+    0 -> 28[label="p"]
+    28 -> 29[label="r"]
+    29 -> 30[label="i"]
+    30 -> 31[label="n"]
+    31 -> print[label="t"]
+    print -> id[label="a-zA-Z0-9_"]
+
+    0 -> int_num1[label="0"]
+    0 -> int_num2[label="1-9"]
+    int_num2 -> int_num2[label="0-9"]
+
+    int_num1 -> dot[label="."]
+    int_num2 -> dot[label="."]
+    dot -> float_num[label="0-9"]
+    float_num -> float_num[label="0-9"]
+
+    // ~ means not
+    0 -> id[label="_A-Za-eg-hj-oqs-z"]
+    1->id[label = "~u~l"]
+    2 -> id[label = "~n"]
+    3 -> id[label = "~c"]
+    4 -> id[label = "~e"]
+    5 -> id[label = "~t"]
+    6 -> id[label = "~u"]
+    7 -> id[label = "~r"]
+    8 -> id[label = "~n"]
+    22 -> id[label = "~n"]
+    23 -> id[label = "~t"]
+    25 -> id[label = "~o"]
+    26 -> id[label = "~a"]
+    27 -> id[label = "~t"]
+    28 -> id[label = "~r"]
+    29 -> id[label = "~i"]
+    30 -> id[label = "~n"]
+    31 -> id[label = "~t"]
+}
